@@ -1,13 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package hammer;
 
 import com.jme3.app.SimpleApplication;
 
 /**
- *
+ * This is the primary class for the game. Its constructor is called
+ * when the game opens.
  *
  */
 public class Hammer extends SimpleApplication{
