@@ -16,30 +16,30 @@ import java.util.logging.Logger;
  *
  */
 public class Hammer extends SimpleApplication {
-    
+
     /**
      * Use logger variable for printing useful statements. The logger
      * instance must be instantiated once per file (i.e., per class).
      * <br>
      * See http://jmonkeyengine.org/wiki/doku.php/jme3:advanced:logging
-     * 
+     *
      */
     private static final Logger logger = Logger.getLogger(Hammer.class.getName());
-    
+
     private Geometry geom;
-    
+
     public static void main(String[] args) {
         Hammer app = new Hammer();
-        
+
         app.setShowSettings(false);
         AppSettings settings = getGameSettings();
         app.setSettings(settings);
-        
+
         app.start();
     }
-    
+
     /**
-     * Set the game settings to good values. This could include, for 
+     * Set the game settings to good values. This could include, for
      * example, resolution and antialiasing.
      * <br>
      * See http://jmonkeyengine.org/wiki/doku.php/jme3:intermediate:appsettings
@@ -62,11 +62,13 @@ public class Hammer extends SimpleApplication {
         geom.setMaterial(mat);
 
         rootNode.attachChild(geom);
+
+        viewPort.setBackgroundColor(ColorRGBA.Red);
     }
 
     @Override
     public void simpleUpdate(float tpf) {
         geom.rotate(0, tpf, 0);
     }
-    
+
 }
